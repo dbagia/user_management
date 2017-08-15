@@ -6,7 +6,6 @@ const getGroupDetails = (state, groupId) => {
 
 	let group = state.groups.filter(g=>g.id === groupId)
 
-
 	return {
 		id: group[0].id,
 		name: group[0].name,
@@ -15,9 +14,9 @@ const getGroupDetails = (state, groupId) => {
 }
 
 const users = (state, ids) => {
-
-	return state.users.filter((user)=>{
-		return ids.indexOf(user.id)
+	
+	return state.users.filter((user)=>{		
+		return ids.indexOf(user.id) >= 0
 	})
 }
 

@@ -11,17 +11,17 @@ let initialState = {
     users:[
         {
             id:'1234',
-            name:'Ramesh',
+            name:'John',
             type:'user'
         },
         {
             id:'1235',
-            name:'Rajesh',
+            name:'Marc',
             type:'user'
         },
         {
             id:'1236',
-            name:'Rakesh',
+            name:'Aleks',
             type:'user'
         }
     ],
@@ -29,13 +29,20 @@ let initialState = {
         {
             id:'0000',
             name:'default',
-            users:[],
+            users:['1234'],
             type:'group'
 
         },
         {
             id:'0001',
             name:'IT',
+            users:[],
+            type:'group'
+
+        },
+        {
+            id:'0002',
+            name:'Marketing',
             users:[],
             type:'group'
 

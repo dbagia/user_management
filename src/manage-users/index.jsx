@@ -7,9 +7,9 @@ class NewUser extends React.Component {
 		super(props)
 
 		this.state = {
-			visible:false,
-			name:'',
-			group:'0000'			
+			visible: false,
+			name: '',
+			group: '0000'
 		}
 
 		this.addUser = this.addUser.bind(this)
@@ -20,28 +20,28 @@ class NewUser extends React.Component {
 
 	addUser() {
 		this.setState({
-			visible:true
+			visible: true
 		})
 	}
 
 	saveUser() {
 		console.warn(this.props)
 		this.props.saveUser({
-			name:this.state.name,
-			group:this.state.group
+			name: this.state.name,
+			group: this.state.group
 		})
 	}
 
 	handleInputChange(e) {
 		this.setState({
-			name:e.target.value
+			name: e.target.value
 		})
 
 		console.error(this.state)
 	}
 	handleGroupChange(e) {
 		this.setState({
-			group:e.target.value
+			group: e.target.value
 		})
 	}
 	render() {
@@ -56,7 +56,7 @@ class NewUser extends React.Component {
 			<div>Select your group:</div>
 			<select defaultValue={this.state.group} onChange={this.handleGroupChange}>
 				{
-					this.props.groups.map((group)=>{
+					this.props.groups.map((group) => {
 						return <option key={group.id} value={group.id}>{group.name}</option>
 					})
 				}
@@ -65,9 +65,9 @@ class NewUser extends React.Component {
 				<button onClick={this.saveUser}>Save</button>
 			</div>
 		</div>
-		
-		return this.state.visible?<div>{addUser}{form}</div>:addUser
-		
+
+		return this.state.visible ? <div>{addUser}{form}</div> : addUser
+
 	}
 }
 
@@ -75,9 +75,9 @@ const users = (props) => {
 	console.error('props', props)
 	return (
 		<div>
-			
-			<NewUser groups={props.groups} saveUser={props.onSave}/>
-			<UserList/>
+
+			<NewUser groups={props.groups} saveUser={props.onSave} />
+			<UserList />
 		</div>
 	)
 }
@@ -92,7 +92,7 @@ const mapDispatchToProps = (dispatch) => {
 	return {
 		onSave: newUser => {
 			dispatch({
-				type:'ADD_USER',
+				type: 'ADD_USER',
 				...newUser
 			})
 		}

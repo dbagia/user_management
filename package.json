@@ -4,7 +4,7 @@
   "description": "User Management System",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --colors",
+    "start": "webpack-dev-server --hot --colors --open",
     "build": "webpack",
     "test": "mocha --compilers js:babel-core/register"
   },

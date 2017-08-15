@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'*/
 import { Items } from '../utilities/list_of_items'
 import { connect } from 'react-redux'
 

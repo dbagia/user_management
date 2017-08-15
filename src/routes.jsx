@@ -1,5 +1,5 @@
 import { Route } from 'react-router-dom'
-import UserList from './manage-users/user_list.jsx'
+/*import UserList from './manage-users/user_list.jsx'*/
 import Users from './manage-users/index.jsx'
 import GroupList from './manage-groups/group_list.jsx'
 import Wrapper from './manage-groups/group_details.jsx'
