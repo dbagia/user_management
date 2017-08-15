@@ -1,6 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
-var services = require('./src/api/services')
+
 module.exports = {
 
     entry:[
@@ -15,11 +15,7 @@ module.exports = {
     devServer:{
         inline:true,
         port:8080,
-        setup:function(app){
-            app.get('/users', services.userService)
-            app.get('/groups', services.groupService)
-            app.post('/user',services.addUser)
-        }
+        historyApiFallback: true
     },
     module:{
         rules:[
@@ -34,7 +30,7 @@ module.exports = {
             },
             {
                 enforce:'pre',
-                test: /\.js$/,
+                test: /\.js[x]?$/,
                 exclude: /node_modules/,
                 loader: 'eslint-loader',
                 options: {
