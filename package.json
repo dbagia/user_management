@@ -1,0 +1,11 @@
+{
+  "name": "user_management_system",
+  "version": "1.0.0",
+  "description": "Manage Users and User Groups",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Dipen Bagia",
+  "license": "ISC"
+}
